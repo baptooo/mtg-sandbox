@@ -1,0 +1,19 @@
+/* Component */
+
+.SearchForm {
+
+}
+
+@media print {
+  .SearchForm {
+    display: none;
+  }
+}
+
+/* children */
+
+.field {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
