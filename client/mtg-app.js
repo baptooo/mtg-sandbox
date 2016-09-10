@@ -1,11 +1,15 @@
-import { get } from 'qwest';
-import store from './store/createStore';
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import App from './components/App';
+import store from './store/configureStore';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
-console.log(store);
+injectTapEventPlugin();
 
-const method = method => `http://localhost:8080/${method}`;
-
-const fetch = (options = null) => {
-  get(method('cards'), options, { responseType: 'json' })
-    .then((xhr, response) => refresh(response));
-};
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('mtg-app')
+);

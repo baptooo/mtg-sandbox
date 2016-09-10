@@ -1,9 +1,11 @@
 import React, { PropTypes, Component } from 'react';
 import Card from './Card';
-import style from './Cards.css';
+import styles from './Cards.css';
+import CircularProgress from 'material-ui/CircularProgress';
 
 const Cards = ({
   items,
+  isLoading,
 }) => {
 
   const getMultiverseId = card => {
@@ -21,18 +23,27 @@ const Cards = ({
   };
 
   return (
-    <ul className={style.Cards}>
-      {items.map((card, key) => (
-        <li key={key} className={style.item}>
-          <Card id={getMultiverseId(card)} />
-        </li>
-      ))}
-    </ul>
+    <div>
+      {isLoading ? (
+        <div className={styles.progress}>
+          <CircularProgress size={1} />
+        </div>
+      ) : (
+        <ul className={styles.Cards}>
+          {items.map((card, key) => (
+            <li key={key} className={styles.item}>
+              <Card id={getMultiverseId(card)} />
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 };
 
 Cards.propTypes = {
   items: PropTypes.array.isRequired,
+  isLoading: PropTypes.bool,
 };
 
 Cards.defaultProps = {

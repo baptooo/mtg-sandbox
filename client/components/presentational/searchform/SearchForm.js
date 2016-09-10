@@ -4,7 +4,7 @@ import SearchField from './SearchField';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const SearchForm = ({
-  onSubmitHandler,
+  fetchCards,
   fields,
 }) => {
   const onSubmit = (evt) => {
@@ -17,7 +17,7 @@ const SearchForm = ({
     }));
 
     if (options !== {}) {
-      onSubmitHandler(options);
+      fetchCards(options);
     }
   };
 

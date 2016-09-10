@@ -1,2 +1,2 @@
-export { default as cards } from './cards';
+export { default as data } from './data';
 export { default as search } from './search';

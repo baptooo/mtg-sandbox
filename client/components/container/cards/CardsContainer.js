@@ -1,9 +1,10 @@
 import {connect} from 'react-redux';
 import Cards from '../../presentational/cards/Cards';
 
-function mapStateToProps({ cards: { items } }) {
+function mapStateToProps({ data: { items, isLoading } }) {
   return {
     items,
+    isLoading,
   };
 }
 
