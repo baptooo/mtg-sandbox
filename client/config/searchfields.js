@@ -16,11 +16,11 @@ export default [
     }],
   },
   // { name: 'multiverseid', type: 'text' },
-  {
-    name: 'layout',
-    type: 'choice',
-    values: [{"name": "normal"}, {"name": "split"}, {"name": "flip"}, {"name": "double-faced"}, {"name": "token"}, {"name": "plane"}, {"name": "scheme"}, {"name": "phenomenon"}, {"name": "leveler"}, {"name": "vanguard"}],
-  },
+  // {
+  //   name: 'layout',
+  //   type: 'choice',
+  //   values: [{"name": "normal"}, {"name": "split"}, {"name": "flip"}, {"name": "double-faced"}, {"name": "token"}, {"name": "plane"}, {"name": "scheme"}, {"name": "phenomenon"}, {"name": "leveler"}, {"name": "vanguard"}],
+  // },
   // { name: 'names', type: 'text' },
   // { name: 'manaCost', type: 'text' },
   {name: 'cmc', type: 'number'},
@@ -31,9 +31,9 @@ export default [
   {
     name: 'rarity',
     type: 'choice',
-    values: ['Common', 'Uncommon', 'Rare', 'Mythic Rare', 'Special', 'Basic Land'],
+    values: [{"name":"Common"},{"name":"Uncommon"},{"name":"Rare"},{"name":"Mythic Rare"},{"name":"Special"},{"name":"Basic Land"}],
   },
-  {name: 'text', type: 'text'},
+  {name: 'text', type: 'text' },
   // { name: 'flavor', type: 'text' },
   { name: 'artist', type: 'text' },
   // { name: 'number', type: 'text' },

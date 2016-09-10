@@ -23,11 +23,18 @@
   text-align: center;
 }
 
+@media print {
+  .item {
+    width: 223px;
+  }
+}
+
 .card {
   cursor: pointer;
   max-width: 500px;
   display: inline-block;
   width: 100%;
+  overflow: hidden;
 }
 
 .card img {
