@@ -1,11 +1,11 @@
 import React, { PropTypes } from 'react';
 import style from './SearchForm.css';
 import SearchField from './SearchField';
-import options from '../../../config/searchfields';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const SearchForm = ({
   onSubmitHandler,
+  fields,
 }) => {
   const onSubmit = (evt) => {
     evt.preventDefault();
@@ -23,7 +23,7 @@ const SearchForm = ({
 
   return (
     <form onSubmit={onSubmit} className={style.SearchForm}>
-      {options.map((option, key) => (
+      {fields.map((option, key) => (
         <SearchField {...option} key={key} />
       ))}
 

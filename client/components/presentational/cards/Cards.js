@@ -3,7 +3,7 @@ import Card from './Card';
 import style from './Cards.css';
 
 const Cards = ({
-  cards,
+  items,
 }) => {
 
   const getMultiverseId = card => {
@@ -21,8 +21,8 @@ const Cards = ({
   };
 
   return (
-    <ul className={style.Cards} ref="list">
-      {cards.map((card, key) => (
+    <ul className={style.Cards}>
+      {items.map((card, key) => (
         <li key={key} className={style.item}>
           <Card id={getMultiverseId(card)} />
         </li>
@@ -32,7 +32,7 @@ const Cards = ({
 };
 
 Cards.propTypes = {
-  cards: PropTypes.array.isRequired,
+  items: PropTypes.array.isRequired,
 };
 
 Cards.defaultProps = {
