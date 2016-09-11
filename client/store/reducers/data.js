@@ -1,11 +1,12 @@
 import * as types from '../actions/actionTypes';
+import { persistentReducer } from 'redux-pouchdb';
 
 const initialState = {
   items: [],
   isLoading: false,
 };
 
-export default function (state = initialState, action) {
+const data = (state = initialState, action) => {
   switch(action.type) {
     case types.FETCH_CARDS_REQUEST:
       return {
@@ -21,4 +22,7 @@ export default function (state = initialState, action) {
     default:
       return state;
   }
-}
+};
+
+export default persistentReducer(data);
+
