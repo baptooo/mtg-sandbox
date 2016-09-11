@@ -6,12 +6,14 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // Components
 import SearchFormContainer from './container/searchform/SearchFormContainer';
 import CardsContainer from './container/cards/CardsContainer';
+import MagnifiedCardContainer from './container/magnifiedcard/MagnifiedCardContainer';
 
 const App = () => (
   <MuiThemeProvider>
     <div>
       <SearchFormContainer />
       <CardsContainer/>
+      <MagnifiedCardContainer />
     </div>
   </MuiThemeProvider>
 );

@@ -6,6 +6,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 const Cards = ({
   items,
   isLoading,
+  magnifyCard,
 }) => {
 
   const getMultiverseId = card => {
@@ -31,7 +32,7 @@ const Cards = ({
       ) : (
         <ul className={styles.Cards}>
           {items.map((card, key) => (
-            <li key={key} className={styles.item}>
+            <li key={key} className={styles.item} onClick={() => magnifyCard(card, getMultiverseId(card))}>
               <Card id={getMultiverseId(card)} />
             </li>
           ))}
@@ -44,6 +45,7 @@ const Cards = ({
 Cards.propTypes = {
   items: PropTypes.array.isRequired,
   isLoading: PropTypes.bool,
+  magnifyCard: PropTypes.func,
 };
 
 Cards.defaultProps = {

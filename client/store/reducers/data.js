@@ -24,5 +24,5 @@ const data = (state = initialState, action) => {
   }
 };
 
-export default persistentReducer(data);
+export default persistentReducer(data, 'data');
 
