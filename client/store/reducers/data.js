@@ -1,5 +1,4 @@
 import * as types from '../actions/actionTypes';
-import { persistentReducer } from 'redux-pouchdb';
 
 const initialState = {
   items: [],
@@ -24,5 +23,4 @@ const data = (state = initialState, action) => {
   }
 };
 
-export default persistentReducer(data, 'data');
-
+export default data;

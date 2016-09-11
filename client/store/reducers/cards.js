@@ -1,5 +1,4 @@
 import * as types from '../actions/actionTypes';
-import { persistentReducer } from 'redux-pouchdb';
 
 const initialState = {
   magnifiedCard: null,
@@ -24,4 +23,4 @@ const cards = (state = initialState, { type, payload }) => {
   }
 };
 
-export default persistentReducer(cards);
+export default cards;
